@@ -30,7 +30,29 @@ public class Main {
         System.out.println("La variable de Marco contiene nt: " + subString);
         String newApellido = Marco.replace("Bustillos", "Bustillos de Parra");
         System.out.println("Me llamo Marco " + newApellido);
-        
+        int Edad = 25;
 
+        //%d it's for integers!
+        System.out.println(String.format("Mi edad es %d, y mi papá tiene %d", Edad, 55));
+        //%f for float .? <- Numbers the I want to show on screen "decimals" -> .2 <- 2 decimals, .4 <- 4 decimals
+        System.out.println(String.format("Variable flotante con decimales: %.4f", Altura));
+
+
+        //Math
+        System.out.println("Now it's time for Math");
+        System.out.println("----------------------------");
+        //📐Rectangulo
+         int b = 15;
+         int a = 8;
+            
+         //Area
+         int rArea = b * a;
+            
+         System.out.println(rArea);
+         
+         //Perimeter
+         int perimeter = (b *  2) + (a * 2);
+         
+         System.out.println(perimeter);
     }
 }
