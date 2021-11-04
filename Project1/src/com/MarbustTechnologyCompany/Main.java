@@ -54,5 +54,13 @@ public class Main {
          int perimeter = (b *  2) + (a * 2);
          
          System.out.println(perimeter);
+
+         //Triangle
+        b = 5;
+        a = 3;
+
+         // Area
+        double tArea = b * a / 2.0;
+        System.out.println(tArea);
     }
 }
