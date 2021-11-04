@@ -18,5 +18,22 @@ public class Main {
             totalEpisodes++;
         }
 
+        //Switch
+        int cinemaOption = 3;
+
+        switch(cinemaOption) {
+            case 1:
+                System.out.println("You're Watching a movie in 2d");
+                break;
+            case 2:
+                System.out.println("You're Watching a movie in 3d");
+                break;
+            case 3: 
+                System.out.println("You're watching a movie in 4d");
+                break;
+            default:
+                System.out.println("Your option it's not available");
+        }
+
     }
 }
