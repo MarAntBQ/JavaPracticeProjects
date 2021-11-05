@@ -1,4 +1,4 @@
-package com.marcoantonio.mvcapp;
+package com.marcoantonio.mvcapp.repository;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -13,8 +13,8 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 @DataJpaTest
-//@AutoConfigureTestDatabase(replace = Replace.NONE)
-@AutoConfigureTestDatabase(connection = EmbeddedDatabaseConnection.H2)
+@AutoConfigureTestDatabase(replace = Replace.NONE)
+//@AutoConfigureTestDatabase(connection = EmbeddedDatabaseConnection.H2)
 public class EmployeeJpaRepositoryTest {
     @Autowired
     private IEployeeJpaRepository repo;
