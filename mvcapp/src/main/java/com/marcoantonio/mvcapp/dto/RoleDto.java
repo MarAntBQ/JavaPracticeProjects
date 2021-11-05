@@ -1,7 +1,13 @@
 package com.marcoantonio.mvcapp.dto;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
 public class RoleDto {
     private Long id;
+
+    @NotBlank
+    @Size(max = 15)
     private String name;
     
     public RoleDto(String name) {
@@ -13,6 +19,12 @@ public class RoleDto {
     }
     public RoleDto() {
     }
+
+    @Override
+    public String toString() {
+        return "RoleDto [id=" + id + ", name=" + name + "]";
+    }
+    
     public Long getId() {
         return id;
     }
@@ -48,6 +60,7 @@ public class RoleDto {
             return false;
         return true;
     }
+    
 
     
     
