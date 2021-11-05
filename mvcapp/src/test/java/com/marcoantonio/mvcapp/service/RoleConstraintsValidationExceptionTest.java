@@ -1,5 +1,11 @@
 package com.marcoantonio.mvcapp.service;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import javax.validation.ConstraintViolationException;
+
 import com.marcoantonio.mvcapp.dto.RoleDto;
 
 import org.junit.jupiter.api.Test;
@@ -11,26 +17,27 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
 public class RoleConstraintsValidationExceptionTest {
+    /**
+     *
+     */
+    private static final String ADMIN = "ADMIN";
     @Autowired
     private RoleServiceImpl roleService;
 
     @Test
     public void constraintsValidationExceptionTest() {
-        try {
-            roleService.create(new RoleDto(null));
-        } catch (Exception e) {
-            System.out.println("");
-        }
-        try {
-            roleService.create(new RoleDto(""));
-        } catch (Exception e) {
-            System.out.println("");
-        }
-        try {
-            roleService.create(new RoleDto("1234567890123456"));
-        } catch (Exception e) {
-            System.out.println("");
-        }
+        
+        assertThrows(ConstraintViolationException.class, () -> {roleService.create(new RoleDto(null));});
+        assertThrows(ConstraintViolationException.class, () -> {roleService.create(new RoleDto(""));});
+        assertThrows(ConstraintViolationException.class, () -> {roleService.create(new RoleDto("1234567890123456"));});
+    }
+
+    @Test
+    public void createRoleOk() {
+        RoleDto roleDto = roleService.create(new RoleDto(ADMIN));
+        assertNotNull(roleDto);
+        assertEquals(ADMIN, roleDto.getName());
+        assertNotNull(roleDto.getId());
     }
     
 }
