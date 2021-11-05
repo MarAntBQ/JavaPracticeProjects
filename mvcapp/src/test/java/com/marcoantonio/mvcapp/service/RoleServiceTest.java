@@ -16,7 +16,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
-public class RoleConstraintsValidationExceptionTest {
+public class RoleServiceTest {
     /**
      *
      */
