@@ -24,4 +24,8 @@ public class StudentController {
 	public List<Student> getStudents() {
         return studentService.getStudents();
 	}
+
+    public void registerNewStudent(Student student) {
+        studentService.addNewStudent(student);
+    }
 }
