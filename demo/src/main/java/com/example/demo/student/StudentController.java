@@ -16,7 +16,6 @@ public class StudentController {
     private final StudentService studentService;
 
 
-    //https://youtu.be/9SGDpanrc8U?t=1969
     @Autowired
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
@@ -27,6 +26,7 @@ public class StudentController {
         return studentService.getStudents();
 	}
 
+    //https://youtu.be/9SGDpanrc8U?t=4087
     @PostMapping
     public void registerNewStudent(@RequestBody Student student) {
         studentService.addNewStudent(student);
