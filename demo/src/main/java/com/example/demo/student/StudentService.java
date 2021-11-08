@@ -1,8 +1,7 @@
 package com.example.demo.student;
 
-import java.time.LocalDate;
-import java.time.Month;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,6 +22,11 @@ public class StudentService {
 	}
 
 	public void addNewStudent(Student student) {
+
+		Optional<Student> studentOptional = studentRepository.findStudentByEmail(student.getEmail());
+		if (studentOptional.isPresent()) {
+			throw new IllegalStateException("Email Taken");
+		}
 		System.out.println(student);
 	}
 }
