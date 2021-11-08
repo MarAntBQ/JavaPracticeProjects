@@ -12,13 +12,13 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class StudentConfig {
     
-    @Bean
-    CommandLineRunner commandLineRunner(StudentRepository repository) {
-        return args -> {
-           Student ana = new Student("Ana Veronica", "soporte@anaveronicaparra.com", LocalDate.of(1991, Month.JUNE, 12));
-           Student marco = new Student("Marco Antonio", "marcoantonio@marbust.com", LocalDate.of(1996, Month.AUGUST, 6));
+    // @Bean
+    // CommandLineRunner commandLineRunner(StudentRepository repository) {
+    //     return args -> {
+    //        Student ana = new Student("Ana Veronica", "soporte@anaveronicaparra.com", LocalDate.of(1991, Month.JUNE, 12));
+    //        Student marco = new Student("Marco Antonio", "marcoantonio@marbust.com", LocalDate.of(1996, Month.AUGUST, 6));
 
-           repository.saveAll(List.of(ana, marco));
-        };
-    }
+    //        repository.saveAll(List.of(ana, marco));
+    //     };
+    // }
 }
