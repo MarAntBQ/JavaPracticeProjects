@@ -26,7 +26,6 @@ public class StudentController {
         return studentService.getStudents();
 	}
 
-    //https://youtu.be/9SGDpanrc8U?t=4087
     @PostMapping
     public void registerNewStudent(@RequestBody Student student) {
         studentService.addNewStudent(student);
