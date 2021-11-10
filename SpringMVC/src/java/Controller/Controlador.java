@@ -48,6 +48,11 @@ public class Controlador {
         id = Integer.parseInt(request.getParameter("id"));
         String sql = "select * from persona where id = " + id;
         datos = this.jdbcTemplate.queryForList(sql);
+        boolean isEmptyDatos = datos.equals(null);
+        if (isEmptyDatos == false) {
+            return new ModelAndView("redirect:/index.htm");
+        }
+        System.out.println(datos.equals(null));
         modelAndView.addObject("lista", datos);
         modelAndView.setViewName("editar");
         return modelAndView;
@@ -77,5 +82,6 @@ public class Controlador {
         this.jdbcTemplate.update(sql);
         return new ModelAndView("redirect:/index.htm");
     }
+
  
 }
