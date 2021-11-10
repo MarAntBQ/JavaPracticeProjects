@@ -14,16 +14,14 @@
         <div class="container mt-4 col-lg-4">
             <div class="card border-info">
                 <div class="card-header bg-info">
-                    <h4>Ver registro</h4>
+                    <h4>Agregar nuevo registro</h4>
                 </div>
                 <div class="card-body">
-                    <form>
-                        <p><strong>Nombre</strong></p>
-                        <p>${lista[0].Nombres}</p>
-                        <p><strong>Correo</strong></p>
-                        <p>${lista[0].Correo}</p>
-                        <p><strong>Nacionalidad</strong></p>
-                        <p>${lista[0].Nacionalidad}</p>
+                    <form method="POST">
+                        <label>Notas</label>
+                        <textarea name="notas"></textarea>
+                        </br>
+                        <input type="submit" value="Agregar" class="btn btn-success"/>
                         <a href="index.htm" class="btn btn-primary">Regresar</a>
                     </form>
                 </div>
