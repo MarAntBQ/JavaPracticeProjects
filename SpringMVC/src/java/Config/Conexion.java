@@ -1,25 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package Config;
+package config;
 
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
-
-
-/**
- *
- * @author CEO
- */
 public class Conexion {
-    public DriverManagerDataSource Conectar() {
+    public DriverManagerDataSource Conectar(){
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName("com.mariadb.jdbc.driver");
-        dataSource.setUrl("jdbc:mariadb://localhost:3306/registro");
+      /*  dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/spring_mvc?autoReconnect=true&useSSL=false&useTimezone=true&serverTimezone=UTC");
+        dataSource.setUsername("root");
+        dataSource.setPassword("1234");*/
+        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/spring_mvc?autoReconnect=true&useSSL=false&useTimezone=true&serverTimezone=UTC");
         dataSource.setUsername("springboot");
         dataSource.setPassword("SpringBoot.21");
         return dataSource;
     }
-    
 }

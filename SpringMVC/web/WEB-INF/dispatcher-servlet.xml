@@ -17,6 +17,10 @@
         <property name="mappings">
             <props>
                 <prop key="index.htm">controlador</prop>
+                <prop key="info.htm">controlador</prop>
+                <prop key="agregar.htm">controlador</prop>
+                <prop key="editar.htm">controlador</prop>
+                <prop key="eliminar.htm">controlador</prop>
             </props>
         </property>
     </bean>
@@ -29,6 +33,6 @@
     <!--
     The index controller.
     -->
-    <bean name="controlador" class="Controller.Controlador" />
+    <bean name="controlador" class="controller.Controlador" />
 
 </beans>
