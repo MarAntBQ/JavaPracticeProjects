@@ -13,6 +13,6 @@ public class App {
         Movie starWars3 = new Movie("La Guerra de las Galaxias 2", "Galactic");
 
 
-        System.out.println(starWars.toString());
+        System.out.println(starWars);
     }
 }
