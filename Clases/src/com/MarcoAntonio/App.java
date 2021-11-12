@@ -2,17 +2,29 @@ package com.MarcoAntonio;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Movie Avengers = new Movie("The Avengers 4: End Game", "Action", 210);
+        Movie backtoTheFuture = new Movie("Back to the Future", "Science Fiction", 20);
+        backtoTheFuture.setWonOscar(true);
 
-        Movie Spiderman = new Movie("Spider-Man: No Way Home", "Super Heroes", 150);
+        Series Arrow = new Series("Flecha", "Super Heroes", 30);
+        Arrow.setTitle("Flecha");
+        Arrow.setGenre("Super Heroes");
+        Arrow.setTotalSeasons(7);
+        Arrow.setTotalEpisodes(10);
 
-        Movie starWars = new Movie();
-        
-        Movie starWars2 = new Movie("La Guerra de las Galaxias 2");
+        Series LegendsofTomorrow = new Series();
 
-        Movie starWars3 = new Movie("La Guerra de las Galaxias 2", "Galactic");
+        // System.out.println(Arrow.getTitle());
+        // System.out.println(Arrow.title);
+        // System.out.println(Arrow);
 
+        // backtoTheFuture.play();
+        // Arrow.pause();
+        //Arrow.moveForward();
 
-        System.out.println(starWars);
+        Media media = new Media("Batman", "Heroes", 20);
+        media.setTitle("Batman 2");
+
+        System.out.println(media);
+
     }
 }
