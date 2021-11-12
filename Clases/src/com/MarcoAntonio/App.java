@@ -12,13 +12,7 @@ public class App {
 
         Movie starWars3 = new Movie("La Guerra de las Galaxias 2", "Galactic");
 
-        Spiderman.play();
-        starWars.pause();
-        Avengers.play();
-        starWars2.play();
-        starWars3.play();
 
-        System.out.println("The " + Spiderman.getName() + " movie, has " + Spiderman.getTotalFrames() + " total frames");
-        System.out.println("The " + starWars.getName() + " movie, has " + starWars.getTotalFrames() + " total frames");
+        System.out.println(starWars.toString());
     }
 }

@@ -60,4 +60,9 @@ public class Movie {
        return  this.duration * 60 * 60;
     }
 
+    @Override
+    public String toString() {
+        return "The movie is: " + name + ", the genre is: " + genre + " and it has " + duration + " minutes as duration";
+    }
+
 }
