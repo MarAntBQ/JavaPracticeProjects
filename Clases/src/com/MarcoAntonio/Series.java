@@ -11,7 +11,7 @@ public class Series extends Media {
     
 
     public Series() {
-        super("", "", 0);
+        super("", "", 0, "");
         totalEpisodes = 0;
         totalSeasons = 0;
         episodeDuration = 0;
@@ -19,8 +19,8 @@ public class Series extends Media {
 
 
 
-    public Series(String title, String genre, int duration, int totalEpisodes, int totalSeasons) {
-        super(title, genre, duration);
+    public Series(String title, String genre, int duration, String sinopsis, int totalEpisodes, int totalSeasons) {
+        super(title, genre, duration, sinopsis);
         this.totalEpisodes = totalEpisodes;
         this.totalSeasons = totalSeasons;
         episodeDuration = duration;
@@ -28,8 +28,8 @@ public class Series extends Media {
 
 
 
-    public Series(String title, String genre, int duration) {
-        super(title, genre, duration);
+    public Series(String title, String genre, int duration, String sinopsis) {
+        super(title, genre, duration, sinopsis);
     }
 
 
