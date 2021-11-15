@@ -1,5 +1,7 @@
 package com.MarcoAntonio;
 
+import java.util.Scanner;
+
 public class Media {
 
     private String title;
@@ -31,15 +33,21 @@ public class Media {
     }
 
     public void play() {
-        System.out.println("Playing: " + title);
+        printSomething("Playing: " + title);
+    }
+    
+    public void pause() {
+        printSomething("Pausing: " + title);
     }
 
-    public void pause() {
-        System.out.println("Pausing: " + title);
+    private void printSomething(String something) {
+        System.out.println(something);
     }
+
+
 
     public void moveForward(int minutes) {
-        System.out.println("Moving forward " + minutes + " minutes");
+        printSomething("Moving forward " + minutes + " minutes");
     }
 
     @Override

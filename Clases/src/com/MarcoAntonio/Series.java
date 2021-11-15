@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Series extends Media {
 
-    int totalEpisodes;
-    int totalSeasons;
-    int episodeDuration;
+    private int totalEpisodes;
+    private int totalSeasons;
+    private int episodeDuration;
 
     
 
