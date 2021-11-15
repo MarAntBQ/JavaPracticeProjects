@@ -7,9 +7,12 @@ public class Movie extends Media {
 
     public Movie(String title, String genre, int duration) {
         super(title, genre, duration);
-        //TODO Auto-generated constructor stub
     }
 
+    @Override
+    public int getDuration() {
+        return super.getDuration();
+    }
 
     public boolean isWonOscar() {
         return wonOscar;

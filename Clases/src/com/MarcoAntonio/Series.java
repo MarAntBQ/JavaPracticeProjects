@@ -19,18 +19,17 @@ public class Series extends Media {
 
 
 
-    public Series(String title, String genre, int duration, int totalEpisodes, int totalSeasons, int episodeDuration) {
+    public Series(String title, String genre, int duration, int totalEpisodes, int totalSeasons) {
         super(title, genre, duration);
         this.totalEpisodes = totalEpisodes;
         this.totalSeasons = totalSeasons;
-        this.episodeDuration = episodeDuration;
+        episodeDuration = duration;
     }
 
 
 
     public Series(String title, String genre, int duration) {
         super(title, genre, duration);
-        //TODO Auto-generated constructor stub
     }
 
 
@@ -41,6 +40,12 @@ public class Series extends Media {
     public void setTotalEpisodes(int totalEpisodes) {
         this.totalEpisodes = totalEpisodes;
     }
+
+    @Override
+    public int getDuration() {
+        return episodeDuration * totalEpisodes * totalSeasons;
+    }
+
     public int getTotalSeasons() {
         return totalSeasons;
     }
