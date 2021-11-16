@@ -1,7 +1,5 @@
 package com.MarcoAntonio;
 
-import com.MarcoAntonio.MediaDownloader.DownloadListener;
-
 public class CineboxPlayer implements MediaDownloader.DownloadListener {
 
 // New Serie

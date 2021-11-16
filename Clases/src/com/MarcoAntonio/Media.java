@@ -12,6 +12,15 @@ public class Media {
     private String sinopsis;
     private String content = "";
 
+    @Override
+    public boolean equals(Object object) {
+        if (object instanceof Media) {
+            return this.title.equals(((Media) object).getTitle()) && this.genre.equals(((Media) object).getGenre());
+        } else {
+            return false;
+        }
+    }
+
     public String getSinopsis() {
         return sinopsis;
     }
