@@ -2,15 +2,24 @@ package com.MarcoAntonio;
 
 import java.util.Scanner;
 
+import javax.swing.text.AbstractDocument.Content;
+
 public class Media {
 
     private String title;
     private String genre;
     private int duration;
     private String sinopsis;
+    private String content = "";
 
     public String getSinopsis() {
         return sinopsis;
+    }
+    public String getContent() {
+        return content;
+    }
+    public void setContent(String content) {
+        this.content = content;
     }
     public void setSinopsis(String sinopsis) {
         this.sinopsis = sinopsis;
@@ -50,22 +59,6 @@ public class Media {
 
     private void printSomething(String something) {
         System.out.println(something);
-    }
-
-    public void download() {
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                System.out.println("Downloading...." + title);
-                try {
-                    Thread.sleep(5000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                System.out.println("Downloaded...." + title); 
-            }
-        });
-        thread.start();
     }
 
     public void moveForward(int minutes) {
