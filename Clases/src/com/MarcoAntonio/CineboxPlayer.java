@@ -10,7 +10,7 @@ public class CineboxPlayer implements MediaDownloader.DownloadListener {
 //End New Serie
 
 public void initialize() {
-        ArrayList<String> stringList = new ArrayList<>();
+        ArrayList<Media> mediaList = new ArrayList<>();
         stringList.add("Breaking bad");
         stringList.add("Arrow");
         stringList.add("Flash");
